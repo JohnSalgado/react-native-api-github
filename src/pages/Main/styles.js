@@ -79,7 +79,6 @@ export const ProfileButton = styled(RectButton)`
   justify-content: center;
   align-items: center;
   height: 36px;
-  /* width: 180px; */
 `
 
 export const ProfileButtonText = styled.Text`
@@ -92,7 +91,6 @@ export const ProfileButtonText = styled.Text`
 export const Profile = styled.View`
   flex-direction: row;
   justify-content: space-between;
-  /* padding: 10px; */
 `
 
 export const ProfileButtonRemove = styled(RectButton)`
@@ -104,8 +102,6 @@ export const ProfileButtonRemove = styled(RectButton)`
 
   justify-content: center;
   align-items: center;
-  /* height: 36px; */
-  /* width: 36px; */
 `
 
 export const ProfileButtonRvText = styled.Text`
@@ -113,4 +109,10 @@ export const ProfileButtonRvText = styled.Text`
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
+`
+
+export const TextError = styled.Text`
+  text-align: center;
+  color: #f42;
+  font-weight: bold;
 `
