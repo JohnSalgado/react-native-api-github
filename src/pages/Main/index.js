@@ -5,7 +5,7 @@ import AsyncStorage from '@react-native-community/async-storage'
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import api from '../../services/api'
 
-import { Container, Form, Input, SubmitButton, List, User, Avatar, Name, Bio, ProfileButton, ProfileButtonText } from './styles'
+import { Container, Form, Input, SubmitButton, List, User, Avatar, Name, Bio, ProfileButton, ProfileButtonText, ProfileButtonRemove, ProfileButtonRvText, Profile } from './styles'
 
 export default class Main extends Component {
   static navigationOptions = {
@@ -91,16 +91,21 @@ export default class Main extends Component {
 
         <List
           data={users}
-          keyExtrator={user => user.login}
+          keyExtractor={(item, index) => index.toString()}
           renderItem={({item}) => (
             <User>
               <Avatar source={{ uri: item.avatar }} />
               <Name>{item.name}</Name>
               <Bio>{item.bio}</Bio>
 
-              <ProfileButton onPress={() => this.handleNavigate(item)}>
-                <ProfileButtonText>Ver perfil</ProfileButtonText>
-              </ProfileButton>
+              <Profile>
+                <ProfileButton onPress={() => this.handleNavigate(item)}>
+                  <ProfileButtonText>Ver perfil</ProfileButtonText>
+                </ProfileButton>
+                <ProfileButtonRemove onPress={() => this.handleRemoveUser(item)}>
+                  <ProfileButtonRvText>Remover perfil</ProfileButtonRvText>
+                </ProfileButtonRemove>
+              </Profile>
             </User>
           )}
         />

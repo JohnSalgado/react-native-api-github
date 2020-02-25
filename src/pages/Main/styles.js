@@ -27,7 +27,7 @@ export const Input = styled.TextInput.attrs({
 export const SubmitButton = styled(RectButton)`
   justify-content: center;
   align-items: center;
-  background: #7159c1;
+  background: #258;
   border-radius: 4px;
   margin-left: 10px;
   padding: 0 12px;
@@ -71,13 +71,15 @@ export const Bio = styled.Text.attrs({
 `
 
 export const ProfileButton = styled(RectButton)`
+  flex: 1;
   margin-top: 10px;
   align-self: stretch;
   border-radius: 4px;
-  background: #7159c1;
+  background: #258;
   justify-content: center;
   align-items: center;
   height: 36px;
+  /* width: 180px; */
 `
 
 export const ProfileButtonText = styled.Text`
@@ -87,3 +89,28 @@ export const ProfileButtonText = styled.Text`
   text-transform: uppercase;
 `
 
+export const Profile = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 10px; */
+`
+
+export const ProfileButtonRemove = styled(RectButton)`
+  flex: 1;
+  margin-left: 10px;
+  margin-top: 10px;
+  background: #f42;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+  /* height: 36px; */
+  /* width: 36px; */
+`
+
+export const ProfileButtonRvText = styled.Text`
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+`
