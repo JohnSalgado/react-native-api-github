@@ -1,6 +1,7 @@
 # demo
 
-Projeto simples com React-Native utilizando a api do GitHub para mostras os projetos favoritados.
+Projeto simples utilizando a api do GitHub para listar perfis e os projetos favoritados, salvando no banco de dados do celular com o AsyncStorage.
+
 
 Testado com Android e iOS
 
